@@ -1,0 +1,58 @@
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.7rem;
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 0.05rem solid #777;
+    background-color: #777;
+    box-shadow: 5px 5px 10px #777;
+    overflow: hidden;
+    opacity: 0.9;
+    transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    .em_oji {
+      padding: 0;
+      transition: all 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      .emo_ji_effect {
+        font-size: 6rem;
+        padding: 0;
+        &:active {
+          transform: rotate(405deg);
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        color: #777;
+      }
+    }
+    .texxt {
+      text-shadow: 5px 5px 10px #777;
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: bolder;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+      &:hover {
+        font-size: 1.5rem;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 981px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
+}
